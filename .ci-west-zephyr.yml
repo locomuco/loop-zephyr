@@ -1,0 +1,22 @@
+manifest:
+  self:
+    path: modules/lib/loop-client
+    west-commands: scripts/west-commands.yml
+    import:
+      file: west-zephyr.yml
+      name-allowlist:
+        - cmsis
+        - hal_espressif
+        - hal_nordic
+        - hal_nxp
+        - littlefs
+        - mbedtls
+        - mcuboot
+        - net-tools
+        - segger
+        - tinycrypt
+        - zcbor
+        - zephyr
+    userdata:
+      patches_dirs:
+        - patches/west-zephyr
